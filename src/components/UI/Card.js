@@ -1,14 +1,13 @@
-import React from 'react'
 import "./Card.css"
 
-const Card = (props) => {
+const Card = ({ children, className }) => {
     /* Children --> reserved name. It's value will always be the content 
         of the opening and closing tag
     */
-    const classes = 'card ' + props.className;
+    const classes = 'card ' + className;
     return (
         <div className={classes}>
-            {props.children}
+            {children}
         </div>
     )
 }
